@@ -34,7 +34,7 @@ public class Agente {
     @ColumnInfo(name = "EMAIL")
     private String email;
 
-    @ColumnInfo(name = "senha")
+    @ColumnInfo(name = "SENHA")
     private String senha;
 
     @ColumnInfo(name = "TIPO_CONTA")
