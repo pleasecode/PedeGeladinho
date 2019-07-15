@@ -14,7 +14,7 @@ import java.util.List;
 public interface AgenteDAO {
 
     @Insert
-    void insert(Agente agente);
+    Long insert(Agente agente);
 
     @Delete
     void delete(Agente agente);

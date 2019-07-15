@@ -14,7 +14,7 @@ import java.util.List;
 public interface PedidoDAO {
 
     @Insert
-    void insertPedido(Pedido pedido);
+    Long insert(Pedido pedido);
 
     @Query("SELECT * from PEDIDO P inner join PEDIDO_ITENS PI on PI.COD_PEDIDO = P.COD_PEDIDO " +
             "inner join PEDIDO_FECHAMENTO PF on PF.COD_PEDIDO = P.COD_PEDIDO")
