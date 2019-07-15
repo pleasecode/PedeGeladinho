@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PedeGeladinho</string>
+    <string name="pedido_realizado">Pedido realizado com suceso!</string>
 </resources>
