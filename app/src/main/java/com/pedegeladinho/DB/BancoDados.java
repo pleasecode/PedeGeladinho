@@ -21,12 +21,13 @@ import com.pedegeladinho.Entidades.Evento;
 import com.pedegeladinho.Entidades.FormaPagto;
 import com.pedegeladinho.Entidades.Historico;
 import com.pedegeladinho.Entidades.Pedido;
+import com.pedegeladinho.Entidades.PedidoFechamento;
 import com.pedegeladinho.Entidades.PedidoItens;
 import com.pedegeladinho.Entidades.Presente;
 import com.pedegeladinho.Entidades.Produto;
 
 @Database(entities = {Agente.class, Empresa.class, Evento.class, FormaPagto.class, Historico.class,
-        Pedido.class, PedidoItens.class, PedidoItens.class, Presente.class, Produto.class}, version = 1)
+        Pedido.class, PedidoItens.class, PedidoFechamento.class, Presente.class, Produto.class}, version = 1)
 public abstract class BancoDados extends RoomDatabase {
 
     public abstract AgenteDAO agenteDAO();
@@ -35,13 +36,13 @@ public abstract class BancoDados extends RoomDatabase {
     public abstract EventoDAO eventoDAO();
     public abstract FormaPagtoDAO formaPagtoDAO();
     public abstract HistoricoDAO historicoDAO();
-    public abstract PedidoDAO pedidoDAO();
     public abstract PresenteDAO presenteDAO();
     public abstract ProdutoDAO produtoDAO();
+    public abstract PedidoDAO pedidoDAO();
 
     private static volatile BancoDados bancoDadosInstancia = null;
 
-    static BancoDados getBancoDadosInstancia(final Context context) {
+    public static BancoDados getBancoDadosInstancia(final Context context) {
         if (bancoDadosInstancia == null)  {
             synchronized (BancoDados.class) {
                 bancoDadosInstancia = Room.databaseBuilder(context.getApplicationContext(),

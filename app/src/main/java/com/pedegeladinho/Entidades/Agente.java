@@ -44,6 +44,62 @@ public class Agente {
         this.telefone = telefone;
     }
 
+    public long getCodAgente() {
+        return codAgente;
+    }
+
+    public void setCodAgente(long codAgente) {
+        this.codAgente = codAgente;
+    }
+
+    public long getCodEmpresa() {
+        return codEmpresa;
+    }
+
+    public void setCodEmpresa(long codEmpresa) {
+        this.codEmpresa = codEmpresa;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
+
+    public boolean isEhCliente() {
+        return ehCliente;
+    }
+
+    public void setEhCliente(boolean ehCliente) {
+        this.ehCliente = ehCliente;
+    }
+
+    public boolean isEhFuncionario() {
+        return ehFuncionario;
+    }
+
+    public void setEhFuncionario(boolean ehFuncionario) {
+        this.ehFuncionario = ehFuncionario;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
     @Override
     public String toString() {
         return "Agente{" +

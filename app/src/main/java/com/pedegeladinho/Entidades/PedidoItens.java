@@ -2,9 +2,19 @@ package com.pedegeladinho.Entidades;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "PEDIDO_ITENS")
+@Entity(tableName = "PEDIDO_ITENS",
+        foreignKeys = {
+            @ForeignKey(entity = Pedido.class,
+                parentColumns = "COD_PEDIDO",
+                childColumns = "COD_PEDIDO"),
+
+            @ForeignKey(entity = Produto.class,
+                    parentColumns = "COD_PRODUTO",
+                    childColumns = "COD_PRODUTO")
+        })
 public class PedidoItens {
 
     @PrimaryKey
