@@ -17,6 +17,7 @@ import com.pedegeladinho.Dao.PresenteDAO;
 import com.pedegeladinho.Dao.ProdutoDAO;
 import com.pedegeladinho.Entidades.Agente;
 import com.pedegeladinho.Entidades.Empresa;
+import com.pedegeladinho.Entidades.Estoque;
 import com.pedegeladinho.Entidades.Evento;
 import com.pedegeladinho.Entidades.FormaPagto;
 import com.pedegeladinho.Entidades.Historico;
@@ -27,7 +28,8 @@ import com.pedegeladinho.Entidades.Presente;
 import com.pedegeladinho.Entidades.Produto;
 
 @Database(entities = {Agente.class, Empresa.class, Evento.class, FormaPagto.class, Historico.class,
-        Pedido.class, PedidoItens.class, PedidoFechamento.class, Presente.class, Produto.class}, version = 1)
+        Pedido.class, PedidoItens.class, PedidoFechamento.class, Presente.class, Produto.class, Estoque.class},
+        version = 1)
 public abstract class BancoDados extends RoomDatabase {
 
     public abstract AgenteDAO agenteDAO();

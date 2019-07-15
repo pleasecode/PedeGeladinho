@@ -3,6 +3,7 @@ package com.pedegeladinho.Entidades;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "AGENTE")
@@ -30,18 +31,31 @@ public class Agente {
     @ColumnInfo(name = "TELEFONE")
     private String telefone;
 
+    @ColumnInfo(name = "EMAIL")
+    private String email;
+
+    @ColumnInfo(name = "senha")
+    private String senha;
+
+    @ColumnInfo(name = "TIPO_CONTA")
+    private int tipoConta;
 
     public Agente() {
     }
 
-    public Agente(long codAgente, long codEmpresa, boolean ativo, boolean ehCliente, boolean ehFuncionario,
-                  String telefone) {
+    @Ignore
+    public Agente(long codAgente, long codEmpresa, String nome, boolean ativo, boolean ehCliente,
+                  boolean ehFuncionario, String telefone, String email, String senha, int tipoConta) {
         this.codAgente = codAgente;
         this.codEmpresa = codEmpresa;
+        this.nome = nome;
         this.ativo = ativo;
         this.ehCliente = ehCliente;
         this.ehFuncionario = ehFuncionario;
         this.telefone = telefone;
+        this.email = email;
+        this.senha = senha;
+        this.tipoConta = tipoConta;
     }
 
     public long getCodAgente() {
@@ -100,15 +114,43 @@ public class Agente {
         this.telefone = telefone;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public int getTipoConta() {
+        return tipoConta;
+    }
+
+    public void setTipoConta(int tipoConta) {
+        this.tipoConta = tipoConta;
+    }
+
     @Override
     public String toString() {
         return "Agente{" +
                 "codAgente=" + codAgente +
                 ", codEmpresa=" + codEmpresa +
+                ", nome='" + nome + '\'' +
                 ", ativo=" + ativo +
                 ", ehCliente=" + ehCliente +
                 ", ehFuncionario=" + ehFuncionario +
                 ", telefone='" + telefone + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                ", tipoConta=" + tipoConta +
                 '}';
     }
 }
