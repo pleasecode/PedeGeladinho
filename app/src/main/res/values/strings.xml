@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">PedeGeladinho</string>
     <string name="pedido_realizado">Pedido realizado com suceso!</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="server_client_id">797591160271-clnljd53qdpifi1ev169bqgtutv9srrt.apps.googleusercontent.com</string>
 </resources>

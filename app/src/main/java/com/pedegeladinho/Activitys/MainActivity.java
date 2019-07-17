@@ -1,8 +1,10 @@
-package com.pedegeladinho;
+package com.pedegeladinho.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.pedegeladinho.R;
 
 public class MainActivity extends AppCompatActivity {
 
