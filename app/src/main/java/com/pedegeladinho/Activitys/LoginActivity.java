@@ -71,6 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if (account != null) {
+            startActivity(new Intent(this, MainActivity.class));
             Log.i(TAG, "Conta no onStart: " + account.getEmail());
         }
     }
@@ -92,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
 
             //updateUI(resutado); //startActivity(new Intent(Atual.this, aChamar.class))
             if (resutado != null) {
+                startActivity(new Intent(this, MainActivity.class));
                 Log.i(TAG, "nome da conta: " + resutado.getDisplayName());
             }
         } catch (ApiException e) {
