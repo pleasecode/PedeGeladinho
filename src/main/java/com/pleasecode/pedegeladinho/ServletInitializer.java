@@ -1,4 +1,4 @@
-package com.pedegeladinho.pedegeladinho;
+package com.pleasecode.pedegeladinho;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

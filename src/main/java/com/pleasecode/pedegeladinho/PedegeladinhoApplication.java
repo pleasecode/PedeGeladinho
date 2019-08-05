@@ -1,4 +1,4 @@
-package com.pedegeladinho.pedegeladinho;
+package com.pleasecode.pedegeladinho;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
